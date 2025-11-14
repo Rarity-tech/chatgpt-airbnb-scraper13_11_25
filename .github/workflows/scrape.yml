@@ -29,3 +29,8 @@ jobs:
           MAX_LISTINGS_PER_SEARCH: "200"
         run: |
           python chatgpt_scrape_airbnb.py
+      - name: Upload CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: airbnb_results
+          path: results_chatgpt.csv
